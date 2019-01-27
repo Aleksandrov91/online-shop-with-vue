@@ -1,12 +1,17 @@
 <template>
   <div>
-    <nav>
-      <div class="container">
-        <ul class="nav__left">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <router-link class="navbar-brand" to="/">Home</router-link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
           <!-- Navigation Links -->
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/cart">Cart</router-link></li>
-          <li><router-link to="/admin">Admin</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/">Home</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/cart">Cart</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/admin">Admin</router-link></li>
         </ul>
       </div>
     </nav>
