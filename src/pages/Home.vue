@@ -12,7 +12,7 @@ export default {
     name: 'home',
     data() {
         return {
-            msg: 'golqm kur'
+            msg: 'Welcome to our online shop.'
         }
     }
 };
