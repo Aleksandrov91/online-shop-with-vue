@@ -2,7 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
-import Admin from '@/pages/Admin';
+import Index from '@/pages/admin/index';
+import Products from '@/pages/admin/products';
+import New from '@/pages/admin/new';
+import Edit from '@/pages/admin/edit';
 
 Vue.use(Router);
 
@@ -21,7 +24,24 @@ export default new Router({
     {
       path: '/admin',
       name: 'Admin',
-      component: Admin,
+      component: Index,
+      children: [
+        {
+          path: 'new',
+          name: 'New',
+          component: New
+        },
+        {
+          path: '',
+          name: 'Products',
+          component: Products
+        },
+        {
+          path: 'edit/:id',
+          name: 'Edit',
+          component: Edit
+        },
+      ],
     },
   ],
 });
