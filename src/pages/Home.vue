@@ -7,13 +7,12 @@
 </template>
 
 <script>
-/* eslint-disable */
 export default {
-    name: 'home',
-    data() {
-        return {
-            msg: 'Welcome to our online shop.'
-        }
-    }
+  name: 'home',
+  data() {
+    return {
+      msg: 'Welcome to our online shop.',
+    };
+  },
 };
 </script>
