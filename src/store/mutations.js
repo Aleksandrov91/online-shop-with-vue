@@ -55,34 +55,34 @@ export const productMutations = {
                 return payload
             }
             return p
-        })
+        });
     },
     [REMOVE_PRODUCT]: (state, payload) => {
-        state.showLoader = true
+        state.showLoader = true;
     },
     [REMOVE_PRODUCT_SUCCESS]: (state, payload) => {
-        state.showLoader = false
-        const index = state.products.findIndex(p => p._id === payload)
-        console.debug('index', index)
-        state.products.splice(index, 1)
-    }
-}
+        state.showLoader = false;
+        const index = state.products.findIndex(p => p._id === payload);
+        console.debug('index', index);
+        state.products.splice(index, 1);
+    },
+};
 
 export const cartMutations = {
     [ADD_TO_CART]: (state, payload) => state.cart.push(payload),
     [REMOVE_FROM_CART]: (state, payload) => {
-        const index = state.cart.findIndex(p => p._id === payload)
-        state.cart.splice(index, 1)
-        console.log(state.cart, state.cart.length, index)
-    }
-}
+        const index = state.cart.findIndex(p => p._id === payload);
+        state.cart.splice(index, 1);
+        console.log(state.cart, state.cart.length, index);
+    },
+};
 
 export const manufacturerMutations = {
     [ALL_MANUFACTURERS](state) {
-        state.showLoader = true
+        state.showLoader = true;
     },
     [ALL_MANUFACTURERS_SUCCESS](state, payload) {
-        state.showLoader = false
-        state.manufacturers = payload
-    }
-}
+        state.showLoader = false;
+        state.manufacturers = payload;
+    },
+};
