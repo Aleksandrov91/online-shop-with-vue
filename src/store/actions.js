@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API_BASE = '<API-URL/api/vi>'
+const API_BASE = 'http://localhost:3000'
 
 import {
     ADD_PRODUCT,
@@ -55,8 +55,8 @@ export const productActions = {
             console.debug('response', response.data)
             commit(REMOVE_PRODUCT_SUCCESS, response.data)
         })
-    }
-}
+    },
+};
 
 export const manufacturerActions = {
     allManufacturers({ commit }) {
