@@ -11,16 +11,16 @@
 </template>
 
 <script>
-import ProductDetails from "../components/product/ProductDetails";
+import ProductDetails from '../components/product/ProductDetails';
 
 export default {
   data() {
     return {
-      cart: this.$store.state.cart
+      cart: this.$store.state.cart,
     };
   },
   components: {
-    "product-details": ProductDetails
-  }
+    'product-details': ProductDetails,
+  },
 };
 </script>

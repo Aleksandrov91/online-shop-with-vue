@@ -76,8 +76,8 @@ export default {
   methods: {
     saveProduct() {
       this.$emit('save-product', this.model);
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -15,11 +15,11 @@
         <th scope="row"></th>
       </thead>
       <tbody>
-        <tr v-for="product in products">
-          <td :key="product._id">{{product.name}}</td>
-          <td :key="product._id">{{product.price}}</td>
-          <td :key="product._id">{{product.manufacturer}}</td>
-          <td :key="product._id">
+        <tr v-for="product in products" v-bind:key="product._id">
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.manufacturer}}</td>
+          <td>
             <router-link :to="'/admin/edit' + product._id">
               <i class="fas fa-edit"></i>
             </router-link>
@@ -40,17 +40,17 @@ export default {
   computed: {
     products() {
       return this.$store.getters.allProducts;
-    }
+    },
   },
   created() {
     if (this.products.length === 0) {
-      this.$store.dispatch("allProducts");
+      this.$store.dispatch('allProducts');
     }
   },
   methods: {
     deleteProduct(id) {
-      this.$store.dispatch("removeProduct", id);
-    }
-  }
+      this.$store.dispatch('removeProduct', id);
+    },
+  },
 };
 </script>

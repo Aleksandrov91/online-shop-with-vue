@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ProductList from '../components/product/ProductList.vue';
+import ProductList from '../components/product/ProductList';
 
 export default {
   name: 'home',

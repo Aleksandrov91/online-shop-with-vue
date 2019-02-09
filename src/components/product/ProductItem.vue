@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ProductButton from './ProductButton.vue';
+import ProductButton from './ProductButton';
 
 export default {
   name: 'product-item',

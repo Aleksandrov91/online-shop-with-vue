@@ -10,26 +10,27 @@
 </template>
 
 <script>
-import { ADD_TO_CART, REMOVE_FROM_CART } from "../../store/mutation-types";
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../../store/mutation-types';
+
 export default {
-  props: ["product"],
+  props: ['product'],
   data() {
     return {
-      cart: this.$store.state.cart
+      cart: this.$store.state.cart,
     };
   },
   computed: {
     isAdding() {
       return this.cart.indexOf(this.product) < 0;
-    }
+    },
   },
   methods: {
-    addToCart: function() {
+    addToCart() {
       this.$store.commit(ADD_TO_CART, this.product);
     },
     removeFromCart(id) {
       this.$store.commit(REMOVE_FROM_CART, id);
-    }
-  }
+    },
+  },
 };
 </script>

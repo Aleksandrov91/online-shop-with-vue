@@ -3,34 +3,35 @@
 </template>
 
 <script>
-import ProductForm from "@/components/product/ProductForm.vue";
+import ProductForm from '@/components/product/ProductForm';
+
 export default {
   data() {
     return {
       model: {},
       manufacturers: [
         {
-          _id: "sam",
-          name: "Samsung"
+          _id: 'sam',
+          name: 'Samsung',
         },
         {
-          _id: "apple",
-          name: "Apple"
+          _id: 'apple',
+          name: 'Apple',
         },
         {
-          _id: "xiaomi",
-          name: "Xiaomi"
-        }
-      ]
+          _id: 'xiaomi',
+          name: 'Xiaomi',
+        },
+      ],
     };
   },
   methods: {
     addProduct(model) {
-      console.log("model", model);
-    }
+      console.log('model', model);
+    },
   },
   components: {
-    "product-form": ProductForm
-  }
+    'product-form': ProductForm,
+  },
 };
 </script>

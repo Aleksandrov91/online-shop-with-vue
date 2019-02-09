@@ -7,22 +7,23 @@
 </template>
 
 <script>
-import ProductItem from "./ProductItem.vue";
+import ProductItem from './ProductItem';
+
 export default {
-  name: "product-list",
+  name: 'product-list',
   created() {
     if (this.products.length === 0) {
       console.log(this.$store);
-      this.$store.dispatch("allProducts");
+      this.$store.dispatch('allProducts');
     }
   },
   computed: {
     products() {
       return this.$store.getters.allProducts;
-    }
+    },
   },
   components: {
-    "product-item": ProductItem
-  }
+    'product-item': ProductItem,
+  },
 };
 </script>
