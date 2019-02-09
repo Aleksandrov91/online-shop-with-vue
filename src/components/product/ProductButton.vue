@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-if="isAdding" class="btn btn-primary" @click="addToCard()">
+    <button v-if="isAdding" class="btn btn-primary" @click="addToCart()">
       <i class="fa fa-cart-plus"></i> Add to Cart
     </button>
     <button v-else class="btn btn-warning" @click="removeFromCart(product._id)">
@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../../store/mutation-types';
+import { ADD_TO_CART, REMOVE_FROM_CART } from "../../store/mutation-types";
 export default {
-  props: ['product'],
+  props: ["product"],
   data() {
     return {
       cart: this.$store.state.cart
@@ -24,7 +24,7 @@ export default {
     }
   },
   methods: {
-    addToCart() {
+    addToCart: function() {
       this.$store.commit(ADD_TO_CART, this.product);
     },
     removeFromCart(id) {
