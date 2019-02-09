@@ -1,23 +1,12 @@
 <template>
-  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-    <div class="product">
-      <router-link :to="'/details/'+product._id" class="product-link">
-        <div class="product__image">
-          <img class="img-responsive" :src="product.image" alt>
-        </div>
-        <div class="product__description">
-          <div class="product__info">
-            <!-- <small>{{product.manufacturer.name}}</small> -->
-            <h4>{{product.name}}</h4>
-          </div>
-          <div class="product__price-cart">${{product.price}}</div>
-        </div>
-      </router-link>
-      <div class="product__action">
-        <product-button :product="product"></product-button>
-      </div>
+<router-link :to="'/details/' + product._id" class="card" style="width: 18rem;">
+    <img class="card-img-top" :src="product.image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <h5 class="card-title">{{product.price}}</h5>
+      <a href="#" class="col-md-12 btn btn-primary">Add to Card</a>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
