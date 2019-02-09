@@ -7,6 +7,7 @@ import Index from '@/pages/admin/index';
 import Products from '@/pages/admin/products';
 import New from '@/pages/admin/new';
 import Edit from '@/pages/admin/edit';
+import Details from '@/pages/details';
 
 Vue.use(Vuex);
 Vue.use(Router);
@@ -24,6 +25,11 @@ export default new Router({
       component: Cart,
     },
     {
+      path: '/details/:id',
+      name: 'Details',
+      component: Details,
+    },
+    {
       path: '/admin',
       name: 'Admin',
       component: Index,
@@ -31,17 +37,17 @@ export default new Router({
         {
           path: 'new',
           name: 'New',
-          component: New
+          component: New,
         },
         {
           path: '',
           name: 'Products',
-          component: Products
+          component: Products,
         },
         {
           path: 'edit/:id',
           name: 'Edit',
-          component: Edit
+          component: Edit,
         },
       ],
     },
