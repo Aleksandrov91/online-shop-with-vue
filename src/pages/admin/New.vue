@@ -1,40 +1,36 @@
 <template>
-    <product-form
-        @save-product="addProduct"
-        :model="model"
-        :manufacturers="manufacturers">
-    </product-form>
+  <product-form @save-product="addProduct" :model="model" :manufacturers="manufacturers"></product-form>
 </template>
 
 <script>
-import ProductForm from '@/components/product/ProductForm.vue';
+import ProductForm from "@/components/product/ProductForm.vue";
 export default {
-    data() {
-        return {
-            model: {},
-            manufacturers: [
-                {
-                    _id: 'sam',
-                    name: 'Samsung'
-                },
-                {
-                    _id: 'apple',
-                    name: 'Apple'
-                },
-                {
-                    _id: 'xiaomi',
-                    name: 'Xiaomi'
-                },
-            ]
-        };
-    },
-    methods: {
-        addProduct(model) {
-            console.log('model', model);            
+  data() {
+    return {
+      model: {},
+      manufacturers: [
+        {
+          _id: "sam",
+          name: "Samsung"
         },
-    },
-    components: {
-        'product-form': ProductForm
-    },
+        {
+          _id: "apple",
+          name: "Apple"
+        },
+        {
+          _id: "xiaomi",
+          name: "Xiaomi"
+        }
+      ]
+    };
+  },
+  methods: {
+    addProduct(model) {
+      console.log("model", model);
+    }
+  },
+  components: {
+    "product-form": ProductForm
+  }
 };
 </script>
