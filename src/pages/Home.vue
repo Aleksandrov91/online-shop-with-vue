@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="container">
     <div class="title">
-      <h1>
+      <h1 class="text-center">
         <i class="fa fa-braille"></i> In Stock
       </h1>
     </div>
