@@ -9,7 +9,7 @@
 <script>
 import ProductItem from "./ProductItem.vue";
 export default {
-  name: "product-item",
+  name: "product-list",
   created() {
     if (this.products.length === 0) {
       console.log(this.$store);
