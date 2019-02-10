@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
+  <div>
     <div class="title">
-      <h1 class="text-center">
-        <i class="fa fa-braille"></i> In Stock
-      </h1>
+      <h1><i class="fa fa-braille"></i> In Stock</h1>
     </div>
     <product-list></product-list>
   </div>
