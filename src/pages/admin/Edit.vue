@@ -1,7 +1,9 @@
 <template>
-  <div class="title">
-    <h1>This is Admin/Edit/{{$route.params.id}}</h1>
-  </div>
+  <product-form
+    @save-product="updateProduct"
+    :model="model"
+    :manufacturers="manufacturers"
+    :isEditing="true"></product-form>
 </template>
 
 <script>
@@ -20,7 +22,7 @@ export default {
   },
   computed: {
     manufacturers() {
-      return this.$store.getters.manufacturers;
+      return this.$store.getters.allManufacturers;
     },
     model() {
       const productById = this.$store.getters.productById(this.$route.params.id);

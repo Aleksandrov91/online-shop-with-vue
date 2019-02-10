@@ -1,29 +1,23 @@
 <template>
-  <div class="table-responsive">
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <table class="table table-striped">
       <thead>
-        <th scope="row">Name</th>
-        <th scope="row">Price</th>
-        <th scope="row">Manufacturer</th>
-        <th scope="row"></th>
-        <th scope="row"></th>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Manufacturer</th>
+        <th></th>
+        <th></th>
+      </tr>
       </thead>
       <tbody>
-        <tr v-for="product in products" v-bind:key="product._id">
-          <td>{{product.name}}</td>
-          <td>{{product.price}}</td>
-          <td>{{product.manufacturer}}</td>
-          <td>
-            <router-link :to="'/admin/edit' + product._id">
-              <i class="fas fa-edit"></i>
-            </router-link>
-          </td>
-          <td :key="product._id">
-            <a @click="deleteProduct(product._id)">
-              <i class="fa fa-trash"></i>
-            </a>
-          </td>
-        </tr>
+      <tr v-for="product in products" :key="product.id">
+        <td>{{product.name}}</td>
+        <td>${{product.price}}</td>
+        <td>{{product.manufacturer.name}}</td>
+        <td><router-link :to="'/admin/edit/'+product._id"><i class="fa fa-pencil-square-o"></i></router-link></td>
+        <td><a @click="deleteProduct(product._id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
       </tbody>
     </table>
   </div>
