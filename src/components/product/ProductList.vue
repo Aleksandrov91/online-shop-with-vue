@@ -1,8 +1,12 @@
 <template>
-  <div class="row">
-    <template v-for="product in products">
-      <product-item :product="product" :key="product.id"></product-item>
-    </template>
+  <div>
+    <div class="products">
+      <div class="container">
+        <template v-for="product in products">
+          <product-item :product="product" :key="product.id"></product-item>
+        </template>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -27,3 +31,10 @@ export default {
   },
 };
 </script>
+
+<style>
+  .products {
+    background: #F7F8FB;
+    padding: 30px 0;
+  }
+</style>
