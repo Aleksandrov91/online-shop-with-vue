@@ -23,13 +23,13 @@
 </template>
 
 <script>
-import toastr from 'toastr'
+import toastr from 'toastr';
 
 import {
   ADD_PRODUCT_SUCCESS,
   UPDATE_PRODUCT_SUCCESS,
   REMOVE_PRODUCT_SUCCESS,
-} from './store/mutation-types'
+} from './store/mutation-types';
 
 export default {
   name: 'App',

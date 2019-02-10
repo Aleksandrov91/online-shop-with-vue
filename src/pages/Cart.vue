@@ -2,7 +2,7 @@
   <div v-if="cart.length > 0">
     <h1>Your Cart</h1>
     <template v-for="product in products">
-      <product-details :key="product._id" :product="product"></product-details>
+      <product-details :key="product.id" :product="product"></product-details>
     </template>
   </div>
   <div v-else>
